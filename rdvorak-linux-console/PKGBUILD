@@ -1,0 +1,39 @@
+# Maintainer: Ricky Morse <pukku@mac.com>
+pkgname=rdvorak-linux-console
+pkgver=1.0
+pkgrel=1
+epoch=
+pkgdesc="A linux console keyboard map for the RDvorak++ keyboard layout"
+arch=('any')
+url=""
+license=('unknown')
+groups=()
+depends=('kbd')
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=(rdvorak.map.src)
+noextract=()
+md5sums=('103315876029845d26f4f27c0f59d1b8')
+
+build() {
+  cd "$srcdir"
+  # this is needed to actually get a copy of the map for gzip to work on...
+  cp "rdvorak.map.src" "rdvorak.map"
+  gzip "rdvorak.map"
+}
+
+package() {
+  cd "$srcdir"
+  mkdir -p "$pkgdir/usr/share/kbd/keymaps/i386/dvorak"
+  mv "rdvorak.map.gz" "$pkgdir/usr/share/kbd/keymaps/i386/dvorak/rdvorak.map.gz"
+}
+
+# vim:set ts=2 sw=2 et:
