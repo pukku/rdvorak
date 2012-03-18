@@ -1,0 +1,16 @@
+#!/bin/bash
+# this is the wrong way to do it -- it should
+# be done by modifying the rules file...
+
+# get the local directory
+LDIR="`dirname $0`/xkb"
+
+# save the keymap file name
+KEYMAP="$LDIR/keymap/rdvorak"
+
+# run xkbcomp and send it to the current display
+xkbcomp -I"$LDIR" "$KEYMAP" "$DISPLAY"
+
+# clean up
+unset LDIR KEYMAP
+
