@@ -1,0 +1,10 @@
+--- evdev.orig	2012-12-06 21:43:55.688953567 -0500
++++ evdev	2012-12-06 21:43:11.763375195 -0500
+@@ -227,6 +227,7 @@
+   *		cz_qwerty			=	pc+cz(qwerty)
+   *		dev			=	pc+in(deva)
+   *		dvorak			=	pc+us(dvorak)
++  *		rdvorak			=	pc+rdvorak
+   *		dzdwi			=	pc+bt
+   *		el			=	pc+gr
+   *		en_US			=	pc+latin

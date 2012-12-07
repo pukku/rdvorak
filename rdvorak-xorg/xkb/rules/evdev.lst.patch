@@ -1,0 +1,10 @@
+--- evdev.lst.orig	2012-12-06 21:44:09.353128018 -0500
++++ evdev.lst	2012-12-06 21:43:11.763375195 -0500
+@@ -279,6 +279,7 @@
+   alt-intl        us: English (US, alternative international)
+   colemak         us: English (Colemak)
+   dvorak          us: English (Dvorak)
++  rdvorak         us: English (RDvorak)
+   dvorak-intl     us: English (Dvorak international with dead keys)
+   dvorak-alt-intl us: English (Dvorak alternative international no dead keys)
+   dvorak-l        us: English (left handed Dvorak)
